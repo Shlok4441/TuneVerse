@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - TUNEVERSE</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+                  url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    #navbar h1 {
+      font-size: 24px;
+    }
+
+    #navbar div a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    #navbar div a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(8px);
+      padding: 40px 30px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 26px;
+      color: #ffd700;
+    }
+
+    .container label {
+      color: #fff;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .container input[type="email"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffd700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .container input[type="submit"]:hover {
+      background-color: #ffcc00;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      #navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        gap: 10px;
+        text-align: center;
+      }
+
+      #navbar h1 {
+        font-size: 20px;
+      }
+
+      #navbar div a {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar">
+    <h1>TUNEVERSE</h1>
+    <div>
+      <a href="signup.html">Signup</a>
+      <a href="plans.html">Plans</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <form action="login.php" method="POST">
+      <h2>Login to TUNEVERSE</h2>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+</body>
+</html>
